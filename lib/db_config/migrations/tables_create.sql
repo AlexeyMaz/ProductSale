@@ -2,14 +2,14 @@ use Sales;
 
 CREATE TABLE Product (
                           product_id INT PRIMARY KEY AUTO_INCREMENT,
-                          name VARCHAR(255),
+                          product_name VARCHAR(255),
                           wholesale_price DECIMAL(10,2), -- опт
                           retail_price DECIMAL(10,2) -- розница
 );
 
 CREATE TABLE Customer (
                            customer_id INT PRIMARY KEY AUTO_INCREMENT,
-                           name VARCHAR(255),
+                           customer_name VARCHAR(255),
                            address VARCHAR(255),
                            phone VARCHAR(20)
 );

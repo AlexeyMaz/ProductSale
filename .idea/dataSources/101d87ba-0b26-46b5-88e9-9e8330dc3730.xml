@@ -4949,7 +4949,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1117" parent="380" name="name">
+    <column id="1117" parent="380" name="customer_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
@@ -5027,7 +5027,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1134" parent="382" name="name">
+    <column id="1134" parent="382" name="product_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
