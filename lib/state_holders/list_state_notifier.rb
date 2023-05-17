@@ -2,28 +2,28 @@ class ListStateNotifier
   attr_reader :list
 
   def initialize
-    @list = []
+    @items = []
     @listeners = []
   end
 
   def set_all(objects)
-    @list = objects
+    @items = objects
     notify_listeners
   end
 
   def add(object)
-    @list << object
+    @items << object
     notify_listeners
   end
 
   def delete(object)
-    @list.delete(object)
+    @items.delete(object)
     notify_listeners
   end
 
   def replace(object, new_object)
-    index = @list.index(object)
-    @list[index] = new_object
+    index = @items.index(object)
+    @items[index] = new_object
     notify_listeners
   end
 
@@ -37,7 +37,8 @@ class ListStateNotifier
 
   def notify_listeners
     @listeners.each do |listener|
-      listener.update(self)
+      puts @items
+      listener.update(@items)
     end
   end
 end

@@ -1,13 +1,9 @@
 require 'mysql2'
+require_relative '../data_sources/db_client'
 
 class CustomerDbDataSource
-  def initialize(host, username, password, database)
-    @client = Mysql2::Client.new(
-      host: host,
-      username: username,
-      password: password,
-      database: database
-    )
+  def initialize
+    @client = DBClient.instance
   end
 
   def add(customer)
@@ -29,7 +25,7 @@ class CustomerDbDataSource
     query = "SELECT * FROM Customer WHERE customer_id=#{id}"
     result = @client.query(query).first
     if result
-      Customer.new(result['customer_id'], result['customer_name'], result['address'], result['phone'])
+      Customer.new(result[:'customer_id'], result[:'customer_name'], result[:'address'], result[:'phone'])
     else
       nil
     end
@@ -41,8 +37,15 @@ class CustomerDbDataSource
     results = @client.query(query)
     customers = []
     results.each do |result|
-      customers << Customer.new(result['customer_id'], result['customer_name'], result['address'], result['phone'])
+      customers << Customer.new(result[:'customer_id'], result[:'customer_name'], result[:'address'], result[:'phone'])
     end
     customers
+  end
+
+  def count
+    query = 'SELECT COUNT(*) FROM Customer'
+    result = @client.query(query).first
+
+    result[:'COUNT(*)']
   end
 end
