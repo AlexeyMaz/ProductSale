@@ -1,0 +1,3 @@
+DROP DATABASE Sales;
+
+CREATE DATABASE Sales;
