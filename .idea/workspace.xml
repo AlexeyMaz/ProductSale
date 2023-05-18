@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda91a79-11ac-460e-a523-512bf2404671" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_create.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customer/ui/customer_input_form.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagrams/ER.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customer/customer_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customer/customer_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_view.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/main_window.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/main_window.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +54,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
     "ruby.structure.view.model.defaults.configured": "true",
     "vue.rearranger.settings.migration": "true"
@@ -60,6 +70,8 @@
       <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\db_config\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\customer\ui" />
+      <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\customer\controllers" />
       <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib" />
       <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\customer" />
     </key>
@@ -76,6 +88,7 @@
       <workItem from="1684320767605" duration="356000" />
       <workItem from="1684346039680" duration="1220000" />
       <workItem from="1684348754985" duration="16992000" />
+      <workItem from="1684407891956" duration="5231000" />
     </task>
     <servers />
   </component>
@@ -98,7 +111,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProductSale@customer_view.rcov" NAME="customer_view Coverage Results" MODIFIED="1684358081604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684403378131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684412830109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_db_data_source.rcov" NAME="customer_db_data_source Coverage Results" MODIFIED="1684359501968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@main_window.rcov" NAME="main_window Coverage Results" MODIFIED="1684400072349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
   </component>

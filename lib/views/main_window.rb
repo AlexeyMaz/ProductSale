@@ -1,8 +1,7 @@
 require 'glimmer-dsl-libui'
 require_relative 'tab_students'
-require_relative '../customer/customer_view'
-require './lib/customer/customer_view'
-
+require_relative '../customer/ui/customer_view'
+require_relative '../customer/ui/customer_list_view'
 class MainWindow
   include Glimmer
 
@@ -11,10 +10,10 @@ class MainWindow
   end
 
   def create
-    window('Sales', 900, 200) {
+    window('Sales', 1000, 400) {
       tab {
         tab_item('Покупатели') {
-          CustomerView.new.build
+          CustomerListView.new.create
         }
 
         # tab_item('Вкладка 2') { }

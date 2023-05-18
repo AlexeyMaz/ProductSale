@@ -1,6 +1,6 @@
 require 'glimmer-dsl-libui'
 require './lib/models/customer'
-require_relative 'customer_controller'
+require_relative '../controllers/customer_controller'
 
 class CustomerView
   include Glimmer
@@ -68,7 +68,7 @@ class CustomerView
         form {
           stretchy false
 
-          @company_name = entry {
+          @customer_name = entry {
             label 'наименование покупателя'
           }
 

@@ -7,7 +7,7 @@ class CustomerDbDataSource
   end
 
   def add(customer)
-    query = "INSERT INTO Customer (customer_id, customer_name, address, phone) VALUES (#{customer.id}, '#{customer.customer_name}', '#{customer.address}', '#{customer.phone}')"
+    query = "INSERT INTO Customer (customer_name, address, phone) VALUES ('#{customer.customer_name}', '#{customer.address}', '#{customer.phone}')"
     @client.query(query)
   end
 
