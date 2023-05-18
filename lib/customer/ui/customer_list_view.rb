@@ -61,9 +61,27 @@ class CustomerListView
           }
 
           @filter_address = entry {
-            label 'Адресс'
+            label 'Адрес'
           }
 
+          @filter_phone = entry {
+            label 'Телефон'
+          }
+        }
+        vertical_box {
+          stretchy false
+          label {
+            text 'Сортировка'
+          }
+
+          combobox { |c|
+            stretchy false
+            items ['ID', 'Имя покупателя', 'Адрес', 'Телефон']
+            selected 0
+            on_selected do
+              @controller.sort(@current_page, PAGE_SIZE, c.selected)
+            end
+          }
         }
       }
 
