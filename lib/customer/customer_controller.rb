@@ -14,12 +14,26 @@ class CustomerController
     @customer_rep = CustomerDbDataSource.new
   end
 
-  def on_view_created
+  def edit(number)
+    customer = @state_notifier.get(number)
+    puts customer.id
+    # @view.show_edit_dialog(author)
+  end
 
+  def add(number)
+    customer = @state_notifier.get(number)
+    puts customer
+    # @view.show_add_dialog(author)
+  end
+
+  def remove(number)
+    customer = @state_notifier.get(number)
+    puts customer
+    # @view.show_remove_dialog(author)
   end
 
   def refresh_data(page, per_page)
-    items = @customer_rep.get_list(per_page, page, 'customer_name', 'ASC' )
+    items = @customer_rep.get_list(per_page, page, 'customer_name', 'ASC')
     @state_notifier.set_all(items)
     @view.update_student_count(@customer_rep.count)
   end

@@ -16,6 +16,10 @@ class ListStateNotifier
     notify_listeners
   end
 
+  def get(number)
+    @items[number]
+  end
+
   def delete(object)
     @items.delete(object)
     notify_listeners
@@ -37,7 +41,6 @@ class ListStateNotifier
 
   def notify_listeners
     @listeners.each do |listener|
-      puts @items
       listener.update(@items)
     end
   end
