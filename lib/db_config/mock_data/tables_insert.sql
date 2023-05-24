@@ -8,9 +8,9 @@ VALUES
 
 INSERT INTO Customer (customer_name, address, phone)
 VALUES
-    ('John Doe', '123 Main St', '555-1234'),
-    ('Jane Smith', '456 Elm St', '555-5678'),
-    ('Mike Johnson', '789 Oak St', '555-9012');
+    ('John Doe', '123 Main St', '79189443512'),
+    ('Jane Smith', '456 Elm St', '79000451312'),
+    ('Mike Johnson', '789 Oak St', '74955023188');
 
 INSERT INTO Deal (customer_id, product_id, quantity, purchase_date)
 VALUES

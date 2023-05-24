@@ -1,1 +1,0 @@
-<img src="https://vk.com/doc305923121_654786027"/>

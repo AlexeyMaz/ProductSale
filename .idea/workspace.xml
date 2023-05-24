@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda91a79-11ac-460e-a523-512bf2404671" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/101d87ba-0b26-46b5-88e9-9e8330dc3730.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/101d87ba-0b26-46b5-88e9-9e8330dc3730.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diags&amp;reqs/Требования.docx" beforeDir="false" afterPath="$PROJECT_DIR$/diags&amp;reqs/Требования.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/customer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/deal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/deal.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/product.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,9 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "101d87ba-0b26-46b5-88e9-9e8330dc3730"
     ]
   }
 }]]></component>
@@ -69,6 +78,14 @@
       <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\customer" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="tables_create.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="101d87ba-0b26-46b5-88e9-9e8330dc3730" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -81,7 +98,8 @@
       <workItem from="1684320767605" duration="356000" />
       <workItem from="1684346039680" duration="1220000" />
       <workItem from="1684348754985" duration="16992000" />
-      <workItem from="1684407891956" duration="6523000" />
+      <workItem from="1684407891956" duration="8193000" />
+      <workItem from="1684922280800" duration="1158000" />
     </task>
     <servers />
   </component>
@@ -99,12 +117,20 @@
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb</url>
+          <line>28</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProductSale@customer_view.rcov" NAME="customer_view Coverage Results" MODIFIED="1684358081604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684414584831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684923349244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_db_data_source.rcov" NAME="customer_db_data_source Coverage Results" MODIFIED="1684359501968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@main_window.rcov" NAME="main_window Coverage Results" MODIFIED="1684400072349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
   </component>

@@ -1,5 +1,5 @@
 class Deal
-  attr_accessor :id, :quantity, :customer_id, :product_id, :purchase_date
+  attr_reader :id, :quantity, :customer_id, :product_id, :purchase_date
 
   def initialize(id, purchase_date, quantity, customer_id, product_id)
     @id = id

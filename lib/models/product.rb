@@ -1,5 +1,5 @@
 class Product
-  attr_accessor :id, :product_name, :wholesale_price, :retail_price
+  attr_reader :id, :product_name, :wholesale_price, :retail_price
 
   def initialize(id, product_name, wholesale_price, retail_price)
     @id = id

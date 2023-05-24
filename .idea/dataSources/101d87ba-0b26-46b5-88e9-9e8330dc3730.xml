@@ -4948,6 +4948,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="1116" parent="379" name="customer_name">
       <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="1117" parent="379" name="address">
@@ -4968,80 +4969,89 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1121" parent="380" name="deal_id">
+    <check id="1121" parent="380" name="deal_chk_1">
+      <NameSurrogate>1</NameSurrogate>
+      <Predicate>`quantity` &gt; 0</Predicate>
+    </check>
+    <column id="1122" parent="380" name="deal_id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1122" parent="380" name="customer_id">
+    <column id="1123" parent="380" name="customer_id">
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="1123" parent="380" name="product_id">
+    <column id="1124" parent="380" name="product_id">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="1124" parent="380" name="quantity">
+    <column id="1125" parent="380" name="quantity">
       <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1125" parent="380" name="purchase_date">
+    <column id="1126" parent="380" name="purchase_date">
       <DasType>date|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="1126" parent="380" name="deal_ibfk_1">
+    <foreign-key id="1127" parent="380" name="deal_ibfk_1">
       <ColNames>customer_id</ColNames>
       <RefColNames>customer_id</RefColNames>
       <RefTableName>customer</RefTableName>
     </foreign-key>
-    <foreign-key id="1127" parent="380" name="deal_ibfk_2">
+    <foreign-key id="1128" parent="380" name="deal_ibfk_2">
       <ColNames>product_id</ColNames>
       <RefColNames>product_id</RefColNames>
       <RefTableName>product</RefTableName>
     </foreign-key>
-    <index id="1128" parent="380" name="PRIMARY">
+    <index id="1129" parent="380" name="PRIMARY">
       <ColNames>deal_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1129" parent="380" name="customer_id">
+    <index id="1130" parent="380" name="customer_id">
       <ColNames>customer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1130" parent="380" name="product_id">
+    <index id="1131" parent="380" name="product_id">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1131" parent="380" name="PRIMARY">
+    <key id="1132" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1132" parent="381" name="product_id">
+    <column id="1133" parent="381" name="product_id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1133" parent="381" name="product_name">
+    <column id="1134" parent="381" name="product_name">
       <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1134" parent="381" name="wholesale_price">
+    <column id="1135" parent="381" name="wholesale_price">
       <DasType>decimal(10,2 digit)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1135" parent="381" name="retail_price">
+    <column id="1136" parent="381" name="retail_price">
       <DasType>decimal(10,2 digit)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="1136" parent="381" name="PRIMARY">
+    <index id="1137" parent="381" name="PRIMARY">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1137" parent="381" name="PRIMARY">
+    <key id="1138" parent="381" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
