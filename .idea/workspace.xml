@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda91a79-11ac-460e-a523-512bf2404671" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/logger.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_create.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_input_form.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_input_form.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data_sources/db_client.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data_sources/db_client.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_create.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_edit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_edit.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_list_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/product/product_db_data_source.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/product_db_data_source.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/product/ui/product_list_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/ui/product_list_view.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/state_holders/list_state_notifier.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/state_holders/list_state_notifier.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/main_window.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/main_window.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -120,17 +110,20 @@
       <workItem from="1684407891956" duration="8193000" />
       <workItem from="1684922280800" duration="7340000" />
       <workItem from="1684977759526" duration="76000" />
-      <workItem from="1684977945782" duration="7818000" />
+      <workItem from="1684977945782" duration="8458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProductSale@Product.rcov" NAME="Product Coverage Results" MODIFIED="1684979198476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_view.rcov" NAME="customer_view Coverage Results" MODIFIED="1684358081604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684985248507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684986395122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_db_data_source.rcov" NAME="customer_db_data_source Coverage Results" MODIFIED="1684359501968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@main_window.rcov" NAME="main_window Coverage Results" MODIFIED="1684400072349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
   </component>

@@ -11,6 +11,7 @@ class ProductListController
   attr_reader :state_notifier
 
   def initialize(view)
+    LoggerHolder.instance.debug('ProductListController: initialize')
     @view = view
     @state_notifier = ListStateNotifier.new
     @state_notifier.add_listener(@view)
@@ -29,10 +30,12 @@ class ProductListController
   end
 
   def show_view
+    LoggerHolder.instance.debug('ProductListController: show_view')
     @view.create.show
   end
 
   def show_modal_add
+    LoggerHolder.instance.debug('ProductListController: show_modal_add')
     controller = ProductInputFormControllerCreate.new(self)
     view = ProductInputForm.new(controller)
     controller.set_view(view)
@@ -40,6 +43,7 @@ class ProductListController
   end
 
   def show_modal_edit(current_page, per_page, selected_row)
+    LoggerHolder.instance.debug('ProductListController: show_modal_edit')
     item = @state_notifier.get(selected_row)
 
     controller = ProductInputFormControllerEdit.new(self, item)
@@ -49,6 +53,7 @@ class ProductListController
   end
 
   def delete_selected(current_page, per_page, selected_row)
+    LoggerHolder.instance.debug('ProductListController: delete_selected')
     begin
       item = @state_notifier.get(selected_row)
       @product_rep.delete(item.id)
@@ -60,12 +65,14 @@ class ProductListController
   end
 
   def refresh_data(page, per_page)
+    LoggerHolder.instance.debug('ProductListController: refresh_data')
     items = @product_rep.get_list(per_page, page, @sort_by, 'ASC')
     @state_notifier.set_all(items)
     @view.update_count(@product_rep.count)
   end
 
   def sort(page, per_page, sort_index)
+    LoggerHolder.instance.debug('ProductListController: sort')
     @sort_by = @sort_columns[sort_index]
     refresh_data(page, per_page)
   end
