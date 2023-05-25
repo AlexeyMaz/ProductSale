@@ -1,14 +1,14 @@
 require 'glimmer-dsl-libui'
-require_relative '../controllers/customer_list_controller'
-require_relative 'customer_input_form'
+require_relative '../controllers/product_list_controller'
+require_relative 'product_input_form'
 
-class CustomerListView
+class ProductListView
   include Glimmer
 
   PAGE_SIZE = 20
 
   def initialize
-    @controller = CustomerListController.new(self)
+    @controller = ProductListController.new(self)
     @current_page = 1
     @total_count = 0
   end
@@ -18,14 +18,14 @@ class CustomerListView
     @controller.refresh_data(@current_page, PAGE_SIZE)
   end
 
-  def update(customers)
+  def update(products)
     @items = []
 
     i = 0
-    customers.each do |customer|
+    products.each do |product|
       i += 1
       item_num = ((@current_page - 1) * PAGE_SIZE) + i
-      @items << Struct.new(:№, :id, :имя_покупателя, :адрес, :телефон).new(item_num, customer.id, customer.customer_name, customer.address, customer.phone)
+      @items << Struct.new(:№, :id, :имя_товара, :оптовая_цена, :розничная_цена).new(item_num, product.id, product.product_name, product.wholesale_price, product.retail_price)
     end
 
     @table.model_array = @items
@@ -46,44 +46,12 @@ class CustomerListView
         vertical_box {
           stretchy false
           label {
-            text 'Адрес'
-          }
-
-          combobox { |c|
-            stretchy false
-            items ['Неважно', 'Есть', 'Нет']
-            selected 0
-            on_selected do
-              @controller.filter_address(@current_page, PAGE_SIZE, c.selected)
-            end
-          }
-        }
-
-        vertical_box {
-          stretchy false
-          label {
-            text 'Телефон'
-          }
-
-          combobox { |c|
-            stretchy false
-            items ['Неважно', 'Есть', 'Нет']
-            selected 0
-            on_selected do
-              @controller.filter_phone(@current_page, PAGE_SIZE, c.selected)
-            end
-          }
-        }
-
-        vertical_box {
-          stretchy false
-          label {
             text 'Сортировка'
           }
 
           combobox { |c|
             stretchy false
-            items ['ID', 'Имя покупателя', 'Адрес', 'Телефон']
+            items ['ID', 'Имя товара', 'Оптовая цена', 'Розничная цена']
             selected 0
             on_selected do
               @controller.sort(@current_page, PAGE_SIZE, c.selected)
@@ -98,14 +66,14 @@ class CustomerListView
           table_editable: false,
           filter: lambda do |row_hash, query|
             utf8_query = query.force_encoding("utf-8")
-            row_hash['имя покупателя'].include?(utf8_query)
+            row_hash['название товара'].include?(utf8_query)
           end,
           table_columns: {
             '№' => :text,
             'ID' => :text,
-            'Имя покупателя' => :text,
-            'Адрес' => :text,
-            'Телефон' => :text
+            'Имя товара' => :text,
+            'Оптовая цена' => :text,
+            'Розничная цена' => :text
           },
           per_page: PAGE_SIZE
         )

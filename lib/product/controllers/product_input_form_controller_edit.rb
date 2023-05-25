@@ -1,10 +1,10 @@
 require 'win32api'
 
-class CustomerInputFormControllerEdit
+class ProductInputFormControllerEdit
   def initialize(parent_controller, item)
     @parent_controller = parent_controller
     @item = item
-    @customer_rep = CustomerDbDataSource.new
+    @product_rep = ProductDbDataSource.new
   end
 
   def set_view(view)
@@ -16,15 +16,15 @@ class CustomerInputFormControllerEdit
   end
 
   def populate_fields(item)
-    @view.set_value(:customer_name, item.customer_name)
-    @view.set_value(:address, item.address)
-    @view.set_value(:phone, item.phone)
+    @view.set_value(:product_name, item.product_name)
+    @view.set_value(:wholesale_price, item.wholesale_price.to_s)
+    @view.set_value(:retail_price, item.retail_price.to_s)
   end
 
   def process_fields(fields)
     begin
-      item = Customer.new(@item.id, *fields.values)
-      item = @customer_rep.change(item)
+      item = Product.new(@item.id, *fields.values)
+      item = @product_rep.change(item)
       @parent_controller.state_notifier.replace(@item, item)
       @view.close
     rescue ArgumentError => e

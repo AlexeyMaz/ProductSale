@@ -2,9 +2,9 @@ use Sales;
 
 INSERT INTO Product (product_name, wholesale_price, retail_price)
 VALUES
-    ('Product A', 10.50, 15.99),
-    ('Product B', 8.75, 12.99),
-    ('Product C', 5.99, 9.99);
+    ('Product A', 10, 15),
+    ('Product B', 8, 12),
+    ('Product C', 5, 9);
 
 INSERT INTO Customer (customer_name, address, phone)
 VALUES

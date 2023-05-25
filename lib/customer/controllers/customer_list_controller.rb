@@ -2,16 +2,31 @@ require './lib/state_holders/list_state_notifier'
 require_relative '../ui/customer_input_form'
 require_relative 'customer_input_form_controller_create'
 require_relative 'customer_input_form_controller_edit'
+require_relative '../customer_db_data_source'
 require 'win32api'
 
 class CustomerListController
+
+  attr_reader :state_notifier;
+
   def initialize(view)
     @view = view
     @state_notifier = ListStateNotifier.new
     @state_notifier.add_listener(@view)
     @customer_rep = CustomerDbDataSource.new
+
     @sort_columns = %w[customer_id customer_name address phone]
     @sort_by = @sort_columns.first
+
+    @address_filter_columns = [nil, true, false]
+    @address_filter = @address_filter_columns.first
+
+    @phone_filter_columns = [nil, true, false]
+    @phone_filter = @phone_filter_columns.first
+  end
+
+  def show_view
+    @view.create.show
   end
 
   def on_view_created
@@ -22,10 +37,6 @@ class CustomerListController
     # end
   end
 
-  def show_view
-    @view.create.show
-  end
-
   def show_modal_add
     controller = CustomerInputFormControllerCreate.new(self)
     view = CustomerInputForm.new(controller)
@@ -34,9 +45,9 @@ class CustomerListController
   end
 
   def show_modal_edit(current_page, per_page, selected_row)
-    item_id = @state_notifier.get(selected_row).id
+    item = @state_notifier.get(selected_row)
 
-    controller = CustomerInputFormControllerEdit.new(self, item_id)
+    controller = CustomerInputFormControllerEdit.new(self, item)
     view = CustomerInputForm.new(controller)
     controller.set_view(view)
     view.create.show
@@ -49,24 +60,28 @@ class CustomerListController
       @state_notifier.delete(item)
     rescue
       api = Win32API.new('user32', 'MessageBox', ['L', 'P', 'P', 'L'], 'I')
-      api.call(0, 'Cannot delete this Customer(ID = " + item.id.to_s + ") because he is in assosiated with Deal', 'Error', 0)
+      api.call(0, "Cannot delete this Customer(ID = " + item.id.to_s + ") because he is in assosiated with Deal", "Error", 0)
     end
   end
 
   def refresh_data(page, per_page)
-    # begin
-    #   @data_list = @student_rep.paginated_short_students(page, per_page, @data_list)
-    #   @view.update_student_count(@student_rep.student_count)
-    # rescue
-    #   on_db_conn_error
-    # end
-    items = @customer_rep.get_list(per_page, page, @sort_by, 'ASC')
+    items = @customer_rep.get_list(per_page, page, @sort_by, 'ASC', @address_filter, @phone_filter)
     @state_notifier.set_all(items)
-    @view.update_student_count(@customer_rep.count)
+    @view.update_count(@customer_rep.count)
   end
 
   def sort(page, per_page, sort_index)
     @sort_by = @sort_columns[sort_index]
+    refresh_data(page, per_page)
+  end
+
+  def filter_address(page, per_page, filter_index)
+    @address_filter = @address_filter_columns[filter_index]
+    refresh_data(page, per_page)
+  end
+
+  def filter_phone(page, per_page, filter_index)
+    @phone_filter = @phone_filter_columns[filter_index]
     refresh_data(page, per_page)
   end
 
@@ -75,7 +90,7 @@ class CustomerListController
 
   def on_db_conn_error
     api = Win32API.new('user32', 'MessageBox', ['L', 'P', 'P', 'L'], 'I')
-    api.call(0, 'No connection to DB', 'Error', 0)
+    api.call(0, "No connection to DB", "Error", 0)
     exit(false)
   end
 end

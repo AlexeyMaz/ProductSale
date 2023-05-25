@@ -1,10 +1,10 @@
 use Sales;
-
+-- select * from Product;
 CREATE TABLE Product (
                           product_id INT PRIMARY KEY AUTO_INCREMENT,
                           product_name VARCHAR(255) NOT NULL ,
-                          wholesale_price DECIMAL(10,2) NOT NULL , -- опт
-                          retail_price DECIMAL(10,2) NOT NULL -- розница
+                          wholesale_price INT NOT NULL , -- опт
+                          retail_price INT NOT NULL -- розница
 );
 
 CREATE TABLE Customer (

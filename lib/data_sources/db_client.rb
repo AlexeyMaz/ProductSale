@@ -27,4 +27,8 @@ class DBClient
   def query(statement)
     @client.query(statement)
   end
+
+  def last_id
+    @client.last_id
+  end
 end

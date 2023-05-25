@@ -20,15 +20,13 @@ class CustomerInputFormControllerCreate
 
   def process_fields(fields)
     begin
-      customer_name = fields.delete(:customer_name)
-      address = fields.delete(:address)
-      phone = fields.delete(:phone)
-
-      return if customer_name.nil? || address.nil? || phone.nil?
-
-      item = Customer.new(-1, customer_name, address, phone)
-      @customer_rep.add(item)
+      puts fields
+      item = Customer.new(-1, *fields.values)
+      puts item
+      item = @customer_rep.add(item)
+      @parent_controller.state_notifier.add(item)
       @view.close
+
     rescue ArgumentError => e
       api = Win32API.new('user32', 'MessageBox', ['L', 'P', 'P', 'L'], 'I')
       api.call(0, e.message, 'Error', 0)

@@ -1,5 +1,5 @@
 class ListStateNotifier
-  attr_reader :list
+  attr_reader :items
 
   def initialize
     @items = []

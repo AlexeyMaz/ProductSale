@@ -1,6 +1,6 @@
 require 'glimmer-dsl-libui'
 require_relative '../controllers/customer_input_form_controller_create'
-require_relative '../../models/customer'
+require './lib/models/Customer'
 require 'win32api'
 
 class CustomerInputForm
@@ -17,14 +17,15 @@ class CustomerInputForm
   end
 
   def create
-    @root_container = window('Покупатели', 300, 150) {
+    @root_container = window('Покупатель', 300, 150) {
       resizable false
 
       vertical_box {
         @student_form = form {
           stretchy false
 
-          fields = [[:customer_name, 'Покупатель', false], [:address, 'Адрес', false], [:phone, 'Телефон', false]]
+          fields = [[:customer_name, 'Покупатель'], [:address, 'Адрес'], [:phone, 'Телефон']]
+
           fields.each do |field|
             @entries[field[0]] = entry {
               label field[1]
@@ -37,7 +38,7 @@ class CustomerInputForm
 
           on_clicked {
             values = @entries.transform_values { |v| v.text.force_encoding("utf-8").strip }
-            values.transform_values! { |v| v.empty? ? nil : v}
+            values.transform_values! { |v| v.empty? ? nil : v }
 
             @controller.process_fields(values)
           }

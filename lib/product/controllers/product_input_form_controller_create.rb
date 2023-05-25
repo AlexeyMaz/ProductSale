@@ -1,10 +1,9 @@
 require 'win32api'
 
-class CustomerInputFormControllerEdit
-  def initialize(parent_controller, item)
+class ProductInputFormControllerCreate
+  def initialize(parent_controller)
     @parent_controller = parent_controller
-    @item = item
-    @customer_rep = CustomerDbDataSource.new
+    @product_rep = ProductDbDataSource.new
   end
 
   def set_view(view)
@@ -12,21 +11,18 @@ class CustomerInputFormControllerEdit
   end
 
   def on_view_created
-    populate_fields(@item)
-  end
-
-  def populate_fields(item)
-    @view.set_value(:customer_name, item.customer_name)
-    @view.set_value(:address, item.address)
-    @view.set_value(:phone, item.phone)
+    # @view.make_readonly(:delivery)
   end
 
   def process_fields(fields)
     begin
-      item = Customer.new(@item.id, *fields.values)
-      item = @customer_rep.change(item)
-      @parent_controller.state_notifier.replace(@item, item)
+      puts fields
+      item = Product.new(-1, *fields.values)
+      puts item
+      item = @product_rep.add(item)
+      @parent_controller.state_notifier.add(item)
       @view.close
+
     rescue ArgumentError => e
       api = Win32API.new('user32', 'MessageBox', ['L', 'P', 'P', 'L'], 'I')
       api.call(0, e.message, 'Error', 0)

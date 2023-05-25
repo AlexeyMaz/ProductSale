@@ -1,18 +1,15 @@
 require 'glimmer-dsl-libui'
-require './lib/controllers/student_input_form/student_input_form_controller_create'
-require './lib/models/student_base'
-require_relative 'edit.rb'
+require_relative '../controllers/product_input_form_controller_create'
+require './lib/models/Product'
 require 'win32api'
 
-class StudentInputForm
+class ProductInputForm
   include Glimmer
 
-  def initialize(controller, edit, lamb = nil , existing_student = nil)
-    @existing_student = existing_student.to_hash unless existing_student.nil?
+  def initialize(controller, existing_student = nil)
+    @item = existing_student.to_hash unless existing_student.nil?
     @controller = controller
     @entries = {}
-    @edit = edit
-    @lamb = lamb
   end
 
   def on_create
@@ -20,31 +17,29 @@ class StudentInputForm
   end
 
   def create
-    @root_container = window('Универ', 300, 150) {
+    @root_container = window('Товары', 300, 150) {
       resizable false
 
       vertical_box {
+
         @student_form = form {
           stretchy false
 
-          fields = [[:last_name, 'Фамилия'], [:first_name, 'Имя'], [:father_name, 'Отчество'], [:git, 'Гит'], [:telegram, 'Телеграм'], [:email, 'Почта'], [:phone, 'Телефон']]
+          fields = [[:product_name, 'Имя товара'], [:wholesale_price, 'Оптовая цена'], [:retail_price, 'Розничная цена']]
+
           fields.each do |field|
             @entries[field[0]] = entry {
               label field[1]
-              read_only @edit.edit(field[1])
             }
           end
         }
 
         button('Сохранить') {
           stretchy false
-
           on_clicked {
             values = @entries.transform_values { |v| v.text.force_encoding("utf-8").strip }
-            values.transform_values! { |v| v.empty? ? nil : v}
-
+            values.transform_values! { |v| v.empty? ? nil : v }
             @controller.process_fields(values)
-            @lamb.call
           }
         }
       }

@@ -9,11 +9,14 @@ class CustomerDbDataSource
   def add(customer)
     query = "INSERT INTO Customer (customer_name, address, phone) VALUES ('#{customer.customer_name}', '#{customer.address}', '#{customer.phone}')"
     @client.query(query)
+    customer_id = @client.last_id
+    get(customer_id)
   end
 
   def change(customer)
     query = "UPDATE Customer SET customer_name='#{customer.customer_name}', address='#{customer.address}', phone='#{customer.phone}' WHERE customer_id=#{customer.id}"
     @client.query(query)
+    get(customer.id)
   end
 
   def delete(id)
@@ -31,9 +34,30 @@ class CustomerDbDataSource
     end
   end
 
-  def get_list(page_size, page_num, sort_field, sort_direction)
+  def get_list(page_size, page_num, sort_field, sort_direction, has_address = nil, has_phone = nil)
     offset = (page_num - 1) * page_size
-    query = "SELECT * FROM Customer ORDER BY #{sort_field} #{sort_direction} LIMIT #{page_size} OFFSET #{offset}"
+    query = 'SELECT * FROM Customer'
+
+    if !has_address.nil? || !has_phone.nil?
+      query += ' Where '
+    end
+    if has_address == true
+      query += 'address IS NOT NULL '
+    end
+    if has_address == false
+      query += 'address IS NULL '
+    end
+    if !has_address.nil? && !has_phone.nil?
+      query += 'and '
+    end
+    if has_phone == true
+      query += 'phone IS NOT NULL '
+    end
+    if has_phone == false
+      query += 'phone IS NULL '
+    end
+
+    query += " ORDER BY #{sort_field} #{sort_direction} LIMIT #{page_size} OFFSET #{offset}"
     results = @client.query(query)
     customers = []
     results.each do |result|
