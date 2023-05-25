@@ -1,3 +1,5 @@
+# модель для сущности Товар
+# данная модель реализует валидацию данных
 class Product
   attr_reader :id, :product_name, :wholesale_price, :retail_price
 

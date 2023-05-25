@@ -5,9 +5,11 @@ require_relative 'customer_input_form_controller_edit'
 require_relative '../customer_db_data_source'
 require 'win32api'
 
+# контроллер, которые отвечает за редактирование, удаление, добавление
+# данных в рамках данной сущности
 class CustomerListController
 
-  attr_reader :state_notifier;
+  attr_reader :state_notifier
 
   def initialize(view)
     @view = view

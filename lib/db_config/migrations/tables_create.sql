@@ -1,5 +1,5 @@
 use Sales;
--- select * from Product;
+
 CREATE TABLE Product (
                           product_id INT PRIMARY KEY AUTO_INCREMENT,
                           product_name VARCHAR(255) NOT NULL ,

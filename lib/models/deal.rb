@@ -1,3 +1,5 @@
+# модель для сущности Сделка
+# данная модель реализует валидацию данных
 class Deal
   attr_reader :id, :quantity, :customer_id, :product_id, :purchase_date
 

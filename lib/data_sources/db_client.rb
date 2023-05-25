@@ -1,5 +1,7 @@
 require 'mysql2'
 
+# класс, который реализует непосредственную работу
+# между сущностями и БД
 class DBClient
   private_class_method :new
   @instance_mutex = Mutex.new

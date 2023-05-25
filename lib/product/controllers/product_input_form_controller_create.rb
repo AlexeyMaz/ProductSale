@@ -1,5 +1,7 @@
 require 'win32api'
 
+# контроллер, которые отвечает за создание
+# данных в рамках данной сущности
 class ProductInputFormControllerCreate
   def initialize(parent_controller)
     @parent_controller = parent_controller
@@ -16,9 +18,7 @@ class ProductInputFormControllerCreate
 
   def process_fields(fields)
     begin
-      puts fields
       item = Product.new(-1, *fields.values)
-      puts item
       item = @product_rep.add(item)
       @parent_controller.state_notifier.add(item)
       @view.close

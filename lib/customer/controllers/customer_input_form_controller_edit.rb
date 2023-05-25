@@ -1,5 +1,7 @@
 require 'win32api'
 
+# контроллер, которые отвечает за редактирование
+# данных в рамках данной сущности
 class CustomerInputFormControllerEdit
   def initialize(parent_controller, item)
     @parent_controller = parent_controller

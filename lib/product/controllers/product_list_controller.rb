@@ -5,6 +5,8 @@ require_relative 'product_input_form_controller_edit'
 require_relative '../product_db_data_source'
 require 'win32api'
 
+# контроллер, которые отвечает за редактирование, удаление, добавление
+# данных в рамках данной сущности
 class ProductListController
   attr_reader :state_notifier
 

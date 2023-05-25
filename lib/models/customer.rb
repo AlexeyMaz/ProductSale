@@ -1,3 +1,5 @@
+# модель для сущности Покупатель
+# данная модель реализует валидацию данных
 class Customer
   PHONE_REGEX = /^\+?[78] ?[(-]?\d{3} ?[)-]?[ -]?\d{3}[ -]?\d{2}[ -]?\d{2}$/
   attr_reader :id, :customer_name, :address, :phone

@@ -2,22 +2,29 @@ require 'glimmer-dsl-libui'
 require_relative '../controllers/product_list_controller'
 require_relative 'product_input_form'
 
+# Класс, который реализует представление для
+# сущности Товар
 class ProductListView
   include Glimmer
 
   PAGE_SIZE = 20
 
+  # при инициализации:
+  # создаётся контроллер для сущности Товар
+  # задаётся актуальная страница на представлении
   def initialize
     @controller = ProductListController.new(self)
     @current_page = 1
     @total_count = 0
   end
 
+  # при создании обновляется информация об сущности
   def on_create
     @controller.on_view_created
     @controller.refresh_data(@current_page, PAGE_SIZE)
   end
 
+  # метод, в котором перезаписываетсся информация о сущности
   def update(products)
     @items = []
 

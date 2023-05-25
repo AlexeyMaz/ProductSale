@@ -3,6 +3,8 @@ require_relative '../controllers/customer_input_form_controller_create'
 require './lib/models/Customer'
 require 'win32api'
 
+# класс, который реализует модальное окно для сущности заказчик,
+# которое используется при добавлении или изменении записей через интерфейс
 class CustomerInputForm
   include Glimmer
 

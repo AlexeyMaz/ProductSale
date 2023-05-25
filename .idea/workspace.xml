@@ -5,48 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda91a79-11ac-460e-a523-512bf2404671" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/student_input_form/student_input_form_controller_create.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/student_input_form/student_input_form_controller_edit.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/controllers/tab_students_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_controller.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_create.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_input_form_controller_edit.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/controllers/customer_list_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/customer_db_data_source.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_input_form.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_input_form.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customer/ui/customer_list_view.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customer/ui/customer_view.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data_sources/db_client.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data_sources/db_client.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data_sources/product_db_data_source.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/migrations/tables_create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db_config/mock_data/tables_insert.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/customer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/deal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/deal.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/product.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/student.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/student_base.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/student_short.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/adapters/db_source_adapter.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/adapters/file_source_adapter.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/containers/data_list.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/containers/data_list_student_short.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/containers/data_table.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/data_sources/db_data_source.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/data_sources/file_data_source.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/data_sources/transformers/data_transformer_base.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/data_sources/transformers/data_transformer_json.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/data_sources/transformers/data_transformer_yaml.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/student_repository.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_create.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_create.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_edit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_input_form_controller_edit.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/product/controllers/product_list_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/controllers/product_list_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/product/product_db_data_source.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/product_db_data_source.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/product/ui/product_list_view.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/product/ui/product_list_view.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/state_holders/list_state_notifier.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/state_holders/list_state_notifier.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/util/logger.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/edit.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/main_window.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/main_window.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/student_input_form.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/tab_students.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +120,7 @@
       <workItem from="1684407891956" duration="8193000" />
       <workItem from="1684922280800" duration="7340000" />
       <workItem from="1684977759526" duration="76000" />
-      <workItem from="1684977945782" duration="6263000" />
+      <workItem from="1684977945782" duration="7818000" />
     </task>
     <servers />
   </component>
@@ -155,7 +130,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProductSale@Product.rcov" NAME="Product Coverage Results" MODIFIED="1684979198476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_view.rcov" NAME="customer_view Coverage Results" MODIFIED="1684358081604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684983911070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684985248507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_db_data_source.rcov" NAME="customer_db_data_source Coverage Results" MODIFIED="1684359501968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@main_window.rcov" NAME="main_window Coverage Results" MODIFIED="1684400072349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
   </component>
