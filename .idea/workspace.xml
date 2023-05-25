@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda91a79-11ac-460e-a523-512bf2404671" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Deals.gemspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_tests.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlMaz_gem_deals-0.1.0.gem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/customer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/customer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/product.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diags&amp;reqs/classes&amp;sequances/start.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
       <recent name="C:\Users\AlmaZ\RubyProjects\ProductSale\lib\customer" />
     </key>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.CustomerTest">
+  <component name="RunManager">
     <configuration name="db_create.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/lib/db_config/migrations/db_create.sql" />
       <script-mode>FILE</script-mode>
@@ -93,43 +96,11 @@
       <data-source id="101d87ba-0b26-46b5-88e9-9e8330dc3730" />
       <method v="2" />
     </configuration>
-    <configuration type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true" nameIsGenerated="true">
-      <module name="ProductSale" />
-      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Ilib" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="C:\Users\AlmaZ\RubyProjects\ProductSale\tests\unit_tests.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/tests/unit_test.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="^CustomerTest(#|::)" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Database Script.db_create.sql" />
       <item itemvalue="Database Script.tables_create.sql" />
       <item itemvalue="Database Script.tables_insert.sql" />
-      <item itemvalue="Test::Unit/Shoulda/Minitest.CustomerTest" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Test::Unit/Shoulda/Minitest.CustomerTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -147,7 +118,7 @@
       <workItem from="1684922280800" duration="7340000" />
       <workItem from="1684977759526" duration="76000" />
       <workItem from="1684977945782" duration="9506000" />
-      <workItem from="1684987505530" duration="81000" />
+      <workItem from="1684987505530" duration="737000" />
     </task>
     <servers />
   </component>
@@ -159,12 +130,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProductSale@Product.rcov" NAME="Product Coverage Results" MODIFIED="1684979198476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@Deals.rcov" NAME="Deals Coverage Results" MODIFIED="1684988097121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_view.rcov" NAME="customer_view Coverage Results" MODIFIED="1684358081604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684986395122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@Unnamed.rcov" NAME="Unnamed Coverage Results" MODIFIED="1684987235218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@main.rcov" NAME="main Coverage Results" MODIFIED="1684988143622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@unit_tests.rcov" NAME="unit_tests Coverage Results" MODIFIED="1684987122693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@unit_test_rb.rcov" NAME="unit_test.rb Coverage Results" MODIFIED="1684987355622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
-    <SUITE FILE_PATH="coverage/ProductSale@CustomerTest.rcov" NAME="CustomerTest Coverage Results" MODIFIED="1684987522762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
+    <SUITE FILE_PATH="coverage/ProductSale@CustomerTest.rcov" NAME="CustomerTest Coverage Results" MODIFIED="1684987600626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@customer_db_data_source.rcov" NAME="customer_db_data_source Coverage Results" MODIFIED="1684359501968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
     <SUITE FILE_PATH="coverage/ProductSale@main_window.rcov" NAME="main_window Coverage Results" MODIFIED="1684400072349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ProductSale" />
   </component>

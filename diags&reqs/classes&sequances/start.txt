@@ -1,0 +1,67 @@
+@startuml
+participant "main.rb"                       as main
+
+
+
+
+boundary    "MainWindow"                as mw
+boundary    "CustomerListView"               as ts
+control     "CustomerListController"    as tsc
+entity      "ListStateNotifier"    as dlss
+entity      "CustomerDBDataSource"       as srep
+entity      "DBClient"            as dbds
+
+database    DB                              as db
+
+main -> mw : <<new>>
+mw -> ts : <<new>>
+ts -> tsc : <<new>>(self)
+tsc -> dlss : <<new>>
+dlss --> tsc
+tsc -> dlss : add_listener
+dlss --> tsc
+tsc --> ts
+ts --> mw
+mw --> main
+
+main -> mw : create()
+mw -> ts : create()
+ts -> tsc : on_view_created()
+tsc -> srep : <<new>>
+srep -> dbds : <<instance>>
+dbds -> dbds : <<new>>
+dbds -> db : [connect]
+db --> dbds
+dbds --> srep
+srep --> tsc
+tsc -> srep : <<new>>
+srep --> tsc
+tsc --> ts
+
+ts -> tsc : refresh_data
+tsc -> srep : get_list
+srep -> dbds : prepare_exec
+dbds -> db : [SELECT]
+db --> dbds
+dbds --> srep
+srep -> dlss : <<new>>
+dlss --> srep
+srep -> dlss : set_all
+dlss -> ts : update
+ts --> dlss
+dlss --> srep
+srep --> tsc
+
+tsc -> srep : count
+srep -> dbds: query
+dbds -> db : [SELECT]
+db --> dbds
+dbds --> srep
+srep --> tsc
+tsc -> ts : update_count
+ts --> tsc
+tsc --> ts
+ts --> mw
+mw --> main
+
+@enduml

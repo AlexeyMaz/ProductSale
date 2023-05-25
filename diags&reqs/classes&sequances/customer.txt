@@ -1,0 +1,110 @@
+@startuml
+
+CustomerListView *-- CustomerListController
+CustomerListView --* CustomerListController
+
+CustomerListView -> CustomerInputForm
+CustomerListController o-- ListStateNotifier
+CustomerListController o-- CustomerDBDataSource
+
+CustomerInputFormControllerCreate o-- CustomerDBDataSource
+CustomerInputFormControllerEdit o-- CustomerDBDataSource
+
+CustomerInputForm *-- CustomerInputFormControllerCreate
+CustomerInputForm *-- CustomerInputFormControllerEdit
+CustomerInputForm --* CustomerInputFormControllerCreate
+CustomerInputForm --* CustomerInputFormControllerEdit
+CustomerDBDataSource o-- DBClient
+
+class CustomerDBDataSource {
+  + initialize()
+  + add(Customer: Customer): Customer
+  + change(Customer: Customer): Customer
+  + delete(id: Integer): void
+  + get(id: Integer): Customer
+  + get_list(page_size: Integer, page_num: Integer, sort_field: String, sort_direction: String, has_phone: Boolean): List<Customer>
+    + count(): Integer
+}
+
+class DBClient {
+  + self.instance(): DBClient
+  + query(sql: String): Object
+  + last_id(): Integer
+}
+
+class CustomerListController {
+  - view: Object
+  - state_notifier: ListStateNotifier
+  - Customer_rep: CustomerDBDataSource
+  - sort_columns: Array<String>
+    - sort_by: String
+  - phone_filter_columns: Array<Boolean>
+    - phone_filter: Boolean
+  + on_view_created()
+  + show_view()
+  + show_modal_add()
+  + show_modal_edit(current_page: int, per_page: int, selected_row: int)
+  + delete_selected(current_page: int, per_page: int, selected_row: int)
+  + refresh_data(page: int, per_page: int)
+  + sort(page: int, per_page: int, sort_index: int)
+  + filter_phone(page: int, per_page: int, filter_index: int)
+  - on_db_conn_error()
+}
+class ListStateNotifier {
+  - items: Array
+  - listeners: Array
+  + initialize()
+  + set_all(objects: Array)
+  + add(object: Object)
+  + get(number: Integer): Object
+  + delete(object: Object)
+  + replace(object: Object, new_object: Object)
+  + add_listener(listener: Object)
+  + delete_listener(listener: Object)
+  - notify_listeners()
+}
+
+class CustomerInputFormControllerCreate {
+  - parent_controller: CustomerListController
+  - Customer_rep: CustomerDBDataSource
+  - view: Object
+  + on_view_created()
+  + set_view(view: Object)
+  + process_fields(fields: Hash<String, String>): void
+  - on_db_conn_error()
+}
+class CustomerInputFormControllerEdit {
+  - parent_controller: CustomerListController
+  - item: Customer
+  - Customer_rep: CustomerDBDataSource
+  - view: Object
+  + on_view_created()
+  + set_view(view: Object)
+  + populate_fields(item: Customer): void
+  - on_db_conn_error()
+}
+class CustomerListView {
+  - PAGE_SIZE: integer = 20
+  - controller: CustomerListController
+  - current_page: integer = 1
+  - total_count: integer = 0
+  - items: Struct[]
+  - table: refined_table
+  - page_label: label
+  + initialize()
+  + on_create()
+  + update(Customers: Customer[])
+  + update_count(new_cnt: integer)
+  + create()
+}
+
+class CustomerInputForm {
+  - item: Hash
+  - controller: CustomerInputFormControllerCreate
+  - entries: Hash
+  + initialize(controller: CustomerInputFormControllerCreate, item: Customer)
+  + on_create()
+  + create()
+}
+
+@enduml
